@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% for p in posts %}
+        {% if p.key().id()|string != deleted_post_id|string %}
+        <div class="articles">
+            {{ p.render() | safe }}
+        </div><br><br>
+        {% endif %}
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link type="text/css" rel="stylesheet" href="/static/main.css"/>
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <title>Avneesh's MultiUser Blog</title>
+</head>
+
+<body>
+  <a href="/blog" class="main-title">
+    Avneesh's MultiUser Blog
+  </a>
+
+  <div class="login-area">
+    {% if user %}
+      {{user.name}} (<a class="login-link" href="/logout">logout</a>)
+      <h2><a class="login-link" href="/blog/newpost">New Post</a></h2>
+    {% else %}
+      <a class="login-link" href="/login">LOGIN</a>
+      |
+      <a class="login-link" href="/signup">SIGNUP</a>
+    {% endif %}
+  </div>
+
+  <div id="content">
+  {% block content %}
+  {% endblock %}
+  </div>
+</body>
+
+</html>
+

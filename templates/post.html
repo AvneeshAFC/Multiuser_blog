@@ -1,0 +1,7 @@
+<div class="post">
+    <h2 class="post-heading">
+          <a href="/blog/{{p.key().id()}}#" class="post-title">{{p.subject}}</a>
+    </h2>
+    <small class="username">{{p.getUserName()}} </small>| <small><em>{{p.created.strftime("%b %d, %Y")}}</em></small><hr>
+    <p class="post-content"><h3>{{p._render_text | safe}}</h3></p>
+</div>

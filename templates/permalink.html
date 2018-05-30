@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="post-content">{{post.render() | safe}}</div>
+        <form method="post" role="form">
+            <div><button type="submit" class="like" name="like" value="update"><img src="/static/images/like_small.png" class="like-img"> {{Likes}}</button>
+                <a id="post-delete" class="delpost modify" href="/blog/delpost/{{post.key().id()}}">Delete</a>
+                <a id="post-edit" class="modify" href="/blog/postedit/{{post.key().id()}}">Edit</a>
+            </div>
+        </form>
+    <br>
+    <div class="error">
+        {% if error %}
+            {{error}}
+        {% endif %}
+    </div><br><br>
+
+    <form method="post" role="form" class="comment-form">
+        <div class="form-group">
+            <label for="comment">Join the discussion :</label>
+            <input type="text" class="form-control" placeholder="Add comment here..." id="comment" name="comment" value="">
+        </div>
+        <button type="submit" class="comment_button">post comment</button>
+    </form><br>
+
+        <div class="comment-post">
+            {% for com in comments %}
+            <blockquote>
+                <h3>{{ com.comment }}</h3>
+                <small class="username">{{ com.getUserName() }}</small> | <small><em>{{com.created.strftime("%b %d, %Y")}}</em></small><br><br>
+                <a class="deletecomment" href="/blog/delcomment/{{post.key().id()}}/{{com.key().id()}}">Delete</a>
+                <a class="editcomment" href="/blog/commentedit/{{post.key().id()}}/{{com.key().id()}}">Edit</a><hr>
+            </blockquote>
+            {% endfor %}
+        </div><br>
+{% endblock %}

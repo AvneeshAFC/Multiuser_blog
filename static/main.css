@@ -1,0 +1,147 @@
+body {
+    position: relative;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    width: 800px;
+    margin: 0 auto;
+    padding: 10px;
+    color: #333;
+}
+
+.login-area {
+    font-size: 13px;
+    color: gray;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.login-link {
+    color: gray;
+    text-decoration: none;
+}
+
+.login-link:visited {
+    color: gray;
+}
+
+.login-link:hover {
+    text-decoration: underline;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.error {
+    color: red;
+}
+
+label {
+  display: block;
+  font-size: 20px;
+}
+
+label + label {
+    margin-top: 20px;
+}
+
+input[type=text] {
+    width: 500px;
+    font-size: 20px;
+    padding: 2px;
+    font-family: monospace;
+}
+
+textarea {
+  width: 500px;
+  height: 400px;
+  font-size: 17px;
+  font-family: monospace;
+}
+
+input[type=submit] {
+  font-size: 24px;
+}
+
+.main-title {
+    display: block;
+    color: #222;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+    text-decoration: none;
+}
+
+.post + .post {
+    margin-top: 15px;
+    background-color: black;
+}
+
+.post-heading {
+    position: relative;
+    margin-bottom: none;
+}
+
+.post-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.post-date {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    color: #999;
+
+}
+
+.post-content {
+    font-size: 18;
+    margin-top: 5px;
+}
+
+.comment-post {
+    border: .1rem solid #d1d1d1;
+    margin-top: 0.5rem;
+    padding: 0.3rem;
+    padding-bottom: 0.1rem;
+}
+
+.delpost{
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.deletecomment{
+    margin-right: 10px;
+}
+
+.comment_button{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.username{
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+.like-img{
+    width: 20px;
+    height: 20px;
+}
+
+.like{
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.cancel{
+    text-decoration: none;
+    color: black;
+}
